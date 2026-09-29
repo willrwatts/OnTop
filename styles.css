@@ -1,0 +1,1517 @@
+/* Universal Elements */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+
+
+/* Nav Bar Object */
+nav {
+    background-color: rgb(236, 97, 46);
+    display: flex;
+    position: fixed;
+    gap: 0;
+    top: 3vh;
+    align-items: center;
+    width: 90vw;
+    border-radius: 10px;
+    height: 7vh;
+    margin-left: 5vw;
+    z-index: 999;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+/* Navbar Image */
+nav img {
+    height: 4vh;
+    margin: 0px 1vw;
+}
+
+/* Fully extended navbar */
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    margin: 0px 1vw;
+}
+
+/* Compressed navbar (logo, home, and 3bar menu) */
+.top-nav {
+    display: none;
+    width: 90vw;
+    margin: 0px 1vw;
+}
+
+/* Individual Links */
+nav li a {
+    display: inline;
+    height: 10%;
+    text-decoration: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0px 2px;
+}
+
+/* Active State */
+.active-page {
+    background-color: rgb(215, 66, 25);
+}
+
+/* Hover state */
+nav li a:hover {
+    background-color: rgb(215, 66, 25);
+}
+
+/* Navbar media query */
+@media (max-width: 1080px) {
+    .bottom-nav {
+        display: none;
+    }
+
+    .bottom-nav li {
+        display: none;
+    }
+
+    .bottom-nav li a {
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-nav li {
+        display: inline;
+    }
+
+    .top-nav li a {
+        display: inline;
+    }
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown i {
+        color: white;
+        padding: 0px 10px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: rgb(236, 97, 46);
+        border-radius: 10px;
+        min-width: 160px;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        text-decoration: underline;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown:hover .dropdown i {
+        background-color: rgb(215, 66, 25);
+    }
+
+}
+
+
+
+
+/* Hero section */
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+/* House individual images for each page (keeps it all in one place and cleanly) */
+.home-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/pumpkin-garden.jpg");
+}
+
+.who-are-we-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/handshake.jpg");
+}
+
+.what-we-do-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/duo-talking.jpg");
+}
+
+.reach-out-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/lady-helping-boy.jpg");
+}
+
+.contact-us-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/handshake-group.jpg");
+}
+
+.support-us-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/pexels-fauxels-3184357.jpg");
+}
+
+.resources-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("images/sharing2.jpg");
+}
+
+/* Text box over hero image */
+.hero-text-box {
+    width: 50vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 55vh;
+    left: 10vw;
+}
+
+/* Text box h1, p, a */
+.hero-text-box h1, .hero-text-box p, .hero-textbox a {
+    color: white;
+}
+
+/* Hero link */
+.hero-text-box a {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    width: max-content;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero link */
+.hero-text-box a:after {
+    content: "";
+    background-color: rgb(236, 97, 46);
+    width: 100%;
+    z-index: -3;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+/* Hero Link */
+.hero-text-box a:hover:after {
+    top: 0px;
+    left: 0px;
+}
+  
+  
+
+/* Three (really any) image mod */
+.three-image-mod {
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1vw;
+    width: 80vw;
+    margin: 5vh 10vw;
+}
+
+/* Embodies full image box */
+.three-image-mod a {
+    height: max-content;
+}
+
+/* Box with image, h1, and p text */
+.image-box {
+    height: 100%;
+    padding-bottom: 5px;
+    width: 28vw;
+    /* margin: 1vw; */
+    background-color: rgb(236, 97, 46);
+    transition: .2s;
+}
+
+/* Hover state */
+.image-box:hover {
+    transform: scale(1.03);
+    background-color: rgb(215, 66, 25);
+    transition: .2s;
+}
+
+/* Image box image */
+.image-box img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+/* Image box h1 */
+.image-box h1 {
+    margin: 3% 3% 0px 3%;
+    color: white;
+}
+
+/* Image box p */
+.image-box p {
+    margin: 0px 3% 3% 3%;
+    color: white;
+}
+
+/* Optional element which adds centered header and p text */
+.text-mod {
+    text-align: center;
+    width: 60vw;
+    margin: 5vh 20vw 0vh 20vw;
+}
+
+/* Image box media query */
+@media (max-width: 1000px) { 
+    .three-image-mod {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1vw;
+        width: 80vw;
+        margin: 5vh 10vw;
+    }
+
+    .image-box {
+        padding-bottom: 5px;
+        width: 80vw;
+        /* margin: 1vw; */
+        background-color: rgb(236, 97, 46);
+        transition: .2s;
+    }
+
+    .image-box:hover {
+        transform: scale(1.03);
+        background-color: rgb(215, 66, 25);
+        transition: .2s;
+    }
+}
+
+
+
+
+/* App section */
+.app-section {
+    height: max-content;
+    padding-bottom: 4vh;
+    background-color: rgb(236, 97, 46);
+    display: flex;
+    justify-content: center;
+}
+
+/* Centered app text */
+.app-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3vh 0px;
+}
+
+/* App h1, p */
+.app-text h1, .app-text p {
+    width: 50%;
+    color: white;
+}
+
+/* App image container (award icons) */
+.app-images {
+    display: flex;
+    justify-content: center;
+}
+
+/* App images */
+.app-images img {
+    width: auto;
+    height: 20vh;
+    margin: 0px 2vw;
+}
+
+/* Containers for image and link */
+.app-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Link decoration */
+.app-box a {
+    color: white;
+    border: 1px solid white;
+    font-size: 16pt;
+    padding: 10px 15px;
+    margin: 0px 14%;
+    transition: .2s;
+}
+
+/* Link hover state */
+.app-box a:hover {
+    background-color: white;
+    color: rgb(15, 61, 78);
+    transition: .2s;
+}
+
+/* App section media query */
+@media (max-width: 1000px) {
+    .app-section {
+        height: max-content;
+        padding: 10px;
+        background-color: rgb(236, 97, 46);
+        display: flex;
+        justify-content: center;
+    }
+
+    .app-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Testamonial section */
+.testamonial-section {
+    margin: 0px 10vw 8vh 10vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testamonial-section h1 {
+    margin: 3vh 0px;
+}
+
+/* Contains the photo and text */
+.testamonial-info {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9;
+}
+
+.testamonial-info img {
+    width: 30%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.testamonial-info p {
+    margin: 0px 4vw;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14pt;
+}
+
+.testamonial-info h3 {
+    font-weight: 100;
+    margin: 0px 4vw;
+    font-size: 9pt;
+    text-align: right;
+    margin-top: 2vh;
+}
+
+/* Just contains the text */
+.testamonial-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Footer */
+.foot {
+    background-color: rgb(15, 61, 78);
+    height: min-content;
+    width: 90vw;
+    padding: 2vh 5vw;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.footer-newsletter {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.footer-follow-us {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.footer-other {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.footer-about-us {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.foot h1, .foot p, .foot i, .foot a {
+    color: white;
+}
+
+/* Hover state */
+.foot a:hover {
+    color: rgb(236, 97, 46);
+}
+
+/* Additional hover state for icons */
+.foot a:hover i {
+    color: rgb(236, 97, 46);
+}
+
+/* Newletter email type section */
+.foot input[type=text] {
+    width: 40%;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Newsletter email submit button */
+.foot input[type=submit] {
+    width: max-content;
+    padding: 8px 20px;
+    margin: 8px 0px;
+    background-color: white;
+    color: rgb(15, 61, 78);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Newsletter email submit hover state */
+.foot input[type=submit]:hover {
+    color: white;
+    background-color: rgb(15, 61, 78);;
+    border: 1px solid white;
+}
+
+/* Stacked elements (socials, buttons) are organized in lists */
+.foot ul {
+    list-style-type: none;
+}
+
+
+
+
+
+/* Mission Section */
+.mission-section {
+    text-align: center;
+    margin: 3vh 15vw;
+}
+
+.mission-section img {
+    width: 60%;
+    margin-top: 2vh;
+}
+
+.mission-section h3 {
+    margin-top: 4vh;
+}
+
+@media (max-width: 1000px) {
+    .mission-section img {
+        width: 90%;
+    }
+}
+
+
+
+
+/* Flip Image Mod */
+.flip-image-mod {
+    padding: 15px 15vh;
+    background-color: rgb(236, 97, 46);
+}
+
+/* Header */
+.flip-image-mod-header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.flip-image-mod h1, .image-right-text-mod p, .image-right-text-mod h3, .image-left-text-mod p, .image-left-text-mod h3{
+    color: white;
+}
+
+/* Module for right-hand image */
+.image-right-mod {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-right-mod img {
+    width: 60%;
+    height: 40vh;
+    object-fit: cover;
+    padding-bottom: 10px;
+}
+
+/* Text mod */
+.image-right-text-mod {
+    width: 40%;
+    padding: 15px;
+
+}
+
+/* Module for left-hand image */
+.image-left-mod {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-left-mod img {
+    width: 60%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+/* Text mod */
+.image-left-text-mod {
+    width: 40%;
+    padding: 15px;
+}
+
+/* Flip image mod media query */
+@media (max-width: 1000px) {
+    .image-right-mod {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-right-mod img {
+        width: 100%;
+    }
+
+    .image-right-text-mod {
+        width: 100%;
+    }
+
+    .image-left-mod {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-left-mod img {
+        width: 100%;
+    }
+
+    .image-left-text-mod {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Research mod */
+.research-mod h1 {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+
+
+
+
+/* Locations Mod */
+.locations {
+    background-color: rgb(236, 97, 46);
+}
+
+/* Header */
+.locations-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.locations-header h1, .locations-header p {
+    text-align: center;
+    width: 60%;
+    color: white;
+}
+
+/* Container for locations */
+.locations-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Boxes containing locations */
+.locations-box {
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+/* Hover state */
+.locations-box:hover {
+    transform:scale(1.03);
+    transition: .2s;
+}
+
+.locations-box h1, .locations-box p {
+    text-align: left;
+    color: black;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Leadership section */
+.leadership {
+    padding: 15px 0px;
+}
+
+.leadership h1, .leadership p {
+    text-align: center;
+    width: 60vw;
+    margin: 0px 20vw;
+}
+
+/* Container for leader boxes */
+.leadership-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Contains name, image, and title */
+.leadership-box {
+    width: 25%;
+    background-color: rgb(236, 97, 46);
+    margin: 10px;
+}
+
+.leadership-box h1 {
+    color: white;
+    width: 90%;
+    text-align: center;
+    margin: 5px 5% 0px 5%;
+}
+
+.leadership-box p {
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: 0px 10% 10px 10%;
+}
+
+.leadership-box img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+/* Leadership media query */
+@media (max-width: 1000px) {
+    .leadership-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leadership-box {
+        width: 75%;
+        background-color: rgb(236, 97, 46);
+        margin: 10px;
+    }
+}
+
+
+
+
+
+/* Get Involved Section */
+.get-involved {
+    background-color: rgb(236, 97, 46);
+    padding: 2vh;
+}
+
+.get-involved h1, .get-involved p {
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin: 0px 20% 0px 20%;
+}
+
+/* Container */
+.get-involved-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 2vh 4vw;
+}
+
+.box1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.box2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.box3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* I have no idea where the get involved box is and for the life of me i can't find it so I have no idea what this actually relates to*/
+.get-involved-box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .2s;
+}
+
+/* Hover state */
+.get-involved-box:hover {
+    transform: scale(1.03);
+    transition: .2s;
+}
+
+.get-involved-box h1, .get-involved-box p {
+    color: rgb(236, 97, 46);
+    width: 96%;
+    margin: 2%;
+}
+
+.get-involved-box i {
+    color: rgb(236, 97, 46);
+    font-size: 24pt;
+    margin-top: 2vh;
+}
+
+/* Get involved media query */
+@media (max-width: 1000px) {
+    .get-involved-container {
+        display: flex;
+        flex-direction: column;
+        margin: 2vh 4vw;
+    }
+}
+
+
+
+
+
+/* Very similar to three-image-mod but uses flexwrap instead. Could've been done easier but it may be too incorporated to fix it at the moment */
+/* This container allows for a header */
+.flex-image-mod {
+    margin: 5vh 0px;
+    height: max-content;
+}
+
+.flex-image-mod h1 {
+    text-align: center;
+}
+
+/* Container with flex */
+.flex-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+}
+
+
+
+
+
+/* 404 Image */
+.uh-oh-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.uh-oh-img img {
+    width: 35%;
+}
+
+
+
+
+
+
+/* Reach Out Section */
+.reach-out-section {
+    margin: 4vh 10vw;
+    background-color: rgb(236, 97, 46);
+    width: 80vw;
+    border-radius: 20px;
+}
+
+.reach-out-section h1 {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+/* Container for information */
+.reach-out-container {
+    display: flex;
+}
+
+.reach-out-container h1, .reach-out-container p {
+    text-align: left;
+    color: white;
+}
+
+.reach-out-container img {
+    width: 70%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Link Decoration */
+.reach-out-container a {
+    display: block;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: max-content;
+    position: relative;
+    z-index: 1;
+}
+
+/* Link hover state */
+.reach-out-container a:hover {
+    background-color: white;
+    color: rgb(236, 97, 46);
+}
+
+/* Provides margin between text and image */
+.reach-out-text {
+    margin: 3%;
+}
+
+/* Reach Out media query */
+@media (max-width: 1000px) {
+    .reach-out-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reach-out-container img {
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+
+
+/* Talk to someone Section */
+.talk-to-someone {
+    margin: 5vh 0px;
+}
+
+.talk-to-someone h1, .talk-to-someone p {
+    text-align: center;
+}
+
+.talk-to-someone p {
+    margin-bottom: 1vh;
+}
+
+/* Container */
+.talk-to-someone-container {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+/* Individual Box */
+.talk-to-someone-box {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.talk-to-someone-box img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.talk-to-someone-box h1, .talk-to-someone-box h3 {
+    text-align: center;
+}
+
+.talk-to-someone-box h3 {
+    font-weight: 200;
+    line-height: .75;
+}
+
+.talk-to-someone-box a {
+    text-align: center;
+    color: black;
+    border: 1px solid;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: max-content;
+}
+
+/* Link Hover State */
+.talk-to-someone-box a:hover {
+    background-color: rgb(236, 97, 46);
+    color: white;
+}
+
+/* Talk to someone section media query */
+@media (max-width: 1000px) {
+    .talk-to-someone-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .talk-to-someone-box {
+        width: 60vw;
+    }
+}
+
+
+
+
+/* Contact form section */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vh 0px;
+}
+
+.contact-form h1, .contact-form p {
+    text-align: center;
+    width: 50%;
+}
+
+.contact-form p {
+    margin-bottom: 2vh;
+}
+
+/* Container */
+.contact-form-container {
+    width: 60vw;
+    margin: 0px 5vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+    
+.contact-div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.contact-div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.contact-div3 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.contact-div4 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.contact-div5 {
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+.contact-div6 {
+    grid-area: 1 / 3 / 5 / 5;
+}
+
+.contact-div7 {
+    grid-area: 5 / 1 / 6 / 5;
+    display: flex;
+    justify-content: right;
+}
+
+/* Text box */
+.form-section [type=text] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: rgb(247, 247, 247);
+    box-sizing: border-box;
+}
+
+/* Text area (comment) */
+.form-section textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: rgb(247, 247, 247);
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* Submit button */
+.form-section [type=submit] {
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid rgb(236, 97, 46);
+    background-color: rgb(236, 97, 46);
+    box-sizing: border-box;
+}
+
+/* Submit hover state */
+.form-section [type=submit]:hover {
+    color: white;
+    border: 1px solid rgb(215, 66, 25);
+    background-color: rgb(215, 66, 25);
+    cursor: pointer;
+}
+
+
+
+
+/* Donation Section */
+/* This one is hard to understand for me */
+.donation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vw 0px;
+}
+
+/* Full contianer */
+.donation-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.donation-div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+}
+
+.donation-div1 h4 {
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding: 10px 40px;
+    margin: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.donation-div1 h3 {
+    font-weight: 200; 
+    font-size: 12pt;
+    color: gray;
+    border-bottom: 1px solid gray;
+    user-select: none;
+    padding: 10px 40px;
+    margin: 15px;
+}
+
+.donation-div2 {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Remove input */
+.donation-div2 input {
+    display: none;
+}
+
+/* Label (box) display */
+.donation-div2 label {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    border: 1px solid;
+    color: black;
+    width: 25%;
+    padding: 10px 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Unchecked radio box hover */
+.donation-div2 label:hover {
+    background: #eee;
+}
+
+/* Selected box and label */
+.donation-div2 input:checked + label {
+    background: rgb(236, 97, 46);
+    color: white;
+    border: 1px solid rgb(236, 97, 46);
+}
+
+.donation-div2 {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+}
+
+.donation-div3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.donation-amounts {
+    display: flex;
+    justify-content: stretch;
+}
+
+/* Remove input */
+.donation-div3 input {
+    display: none;
+}
+
+/* Label (box) display */
+.donation-div3 label {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    border: 1px solid;
+    color: black;
+    width: 25%;
+    padding: 10px 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Unchecked radio box hover */
+.donation-div3 label:hover {
+    background: #eee;
+}
+
+/* Selected box and label */
+.donation-div3 input:checked + label {
+    background: rgb(236, 97, 46);
+    color: white;
+    border: 1px solid rgb(236, 97, 46);
+}
+
+.donation-div3 h3 {
+    font-size: 10pt;
+    font-weight: 200;
+    margin: 5px;
+}
+
+.donation-div3 input[type=text] {
+    display: block;
+    border: 1px solid black;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.donation-div4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.donation-div4 h3 {
+    font-size: 10pt;
+    font-weight: 200;
+    margin: 5px;
+}
+
+/* Container */
+.check-box-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 10pt;
+    font-weight: 200;
+    padding: 3px 0px 4px 35px;
+    margin: 5px;
+}
+  
+/* Hides browser default checkbox */
+.check-box-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+/* Custom checkmark */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+/* Hover */
+.check-box-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+/* When checked */
+.check-box-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+  
+/* Create checkmark */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Continue showing checkmark */
+.check-box-container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+/* Checkmark styling */
+.check-box-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.donation-div4 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.donation-div4 a {
+    display: inline-block;
+    border: 1px solid;
+    color: black;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.donation-continue {
+    display: flex;
+    justify-content: right;
+}
+
+.donation-container a:hover {
+    background-color: rgb(236, 97, 46);
+    border: 1px solid rgb(236, 97, 46);
+    color: white;
+}
+
+
+
+
+
+
+/* Resource gallery */
+.resource-gallery {
+    height: max-content;
+    background-color: rgb(236, 97, 46);
+    padding-bottom: 5vh;
+}
+
+/* Header */
+.resource-gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    margin: 0vw 20vw;
+    padding: 4vh 0vw;
+}
+
+.resource-gallery-header h1, .resource-gallery-header p {
+    color: white;
+}
+
+/* Resource Container */
+.resource-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+/* Individual Boxes */
+.resource-box {
+    width: 28vw;
+    padding: 10px;
+}
+
+.resource-box h1, .resource-box p {
+    color: black;
+}
+
+.resource-box h1 {
+    line-height: .95;
+}
+
+.resource-gallery-container a {
+    background-color: white;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+/* Hover State */
+.resource-gallery-container a:hover {
+    transform: scale(1.03);
+    transition: .2s;
+}
+
+/* Alt gallery contains reversed colors, there is likely a better way, but this works */
+.resource-gallery-alt {
+    height: max-content;
+    background-color: white;
+    padding-bottom: 5vh;
+}
+
+.resource-gallery-header-alt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    margin: 0vw 20vw;
+    padding: 4vh 0vw;
+}
+
+.resource-gallery-container-alt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+.resource-box-alt {
+    width: 28vw;
+    padding: 10px;
+}
+
+.resource-box-alt h1, .resource-box-alt p {
+    color: white;
+}
+
+.resource-box-alt h1 {
+    line-height: .95;
+}
+
+.resource-gallery-container-alt a {
+    background-color: rgb(236, 97, 46);
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.resource-gallery-container-alt a:hover {
+    background-color: rgb(215, 66, 25);
+    transform: scale(1.03);
+    transition: .2s;
+}
+
+/* Resource gallery (& alt) media query */
+@media (max-width: 1000px) {
+    .resource-gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .resource-gallery-container-alt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .resource-box {
+        width: 60vw;
+    }
+    
+    .resource-box-alt {
+        width: 60vw;
+    }
+}

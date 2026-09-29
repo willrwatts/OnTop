@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title -->
+    <title>Support Us</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ace3a56f93.js" crossorigin="anonymous"></script>
+
+    <!-- Font(s) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Script (If Needed) -->
+    <script src="script.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo-transparent.png">
+
+</head>
+<body>
+    
+    
+    
+    <!-- Nav Bar -->
+    <nav>
+
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="images/logo-white-transparent.png" alt="OnTop Logo">
+        </a>
+
+
+        <!-- Top Nav is the media queries version of the nav. It is shrunken -->
+        <ul class="top-nav">
+
+            <!-- Home Page -->
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <!-- 3 Bar Dropdown -->
+            <li>
+                <div class=dropdown>
+                    <i class="fa-solid fa-bars"></i>
+                    <div class="dropdown-content">
+                        <a href="who-are-we.html">Who Are We</a>
+                        <a href="what-we-do.html">What We Do</a>
+                        <a href="reach-out.html">Reach Out</a>
+                        <a href="contact-us.html">Contact Us</a>
+                        <a href="support-us.html">Support Us</a>
+                        <a href="resources.html">Resources</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+        <!-- Bottom Nav is the main, enlarged nav bar -->
+        <ul class="bottom-nav">
+            
+            <!-- Home -->
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <!-- Who Are We -->
+            <li>
+                <a href="who-are-we.html">Who Are We</a>
+            </li>
+
+            <!-- What We Do -->
+            <li>
+                <a href="what-we-do.html">What We Do</a>
+            </li>
+
+            <!-- Reach Out -->
+            <li>
+                <a href="reach-out.html">Reach Out</a>
+            </li>
+
+            <!-- Contact Us -->
+            <li>
+                <a href="contact-us.html">Contact Us</a>
+            </li>
+
+            <!-- Support Us -->
+            <li>
+                <a href="support-us.html" class="active-page">Support Us</a>
+            </li>
+
+            <!-- Resources -->
+            <li>
+                <a href="resources.html">Resources</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <div class="hero-section support-us-page">
+
+        <!-- The information inside the section -->
+        <div class="hero-info">
+
+            <!-- The text and the button -->
+            <div class="hero-text-box">
+                <h1>Support Us</h1>
+                <p>Help support our cause via donation, volunteer work, or spreading our message.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Three Image Button Boxes -->
+    <div class="flex-image-mod">
+
+        <!-- Header -->
+        <h1>Get Involved</h1>
+
+        <!-- Container -->
+        <div class="flex-image-container">
+            
+            <!-- Box 1 -->
+            <a href="404.html">
+
+                <!-- Information -->
+                <div class="image-box">
+                    <img src="images/volunteer-event.jpg" alt="OnTop Volunteers">
+                    <h1>Volunteer</h1>
+                    <p>Help support our OnTop locations and events. Support us in spreading our mission and promoting awareness for our organization.</p>
+                </div>
+            </a>
+
+            <!-- Box 2 -->
+            <a href="contact-us.html#contact-here">
+
+                <!-- Information -->
+                <div class="image-box">
+                    <img src="images/conference.jpg" alt="OnTop Conference Talk">
+                    <h1>Host an Event</h1>
+                    <p>We are more than happy to join events and meetings. Reach out to us about inviting us to events.</p>
+                </div>
+            </a>
+
+            <!-- Box 3 -->
+            <a href="#footer">
+
+                <!-- Information -->
+                <div class="image-box">
+                    <img src="images/sharing.jpg" alt="Spread the Word Photo">
+                    <h1>Spread the Word</h1>
+                    <p>Find ways to share our resources with others.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Donation Section -->
+    <div class="donation-section"  id="donate-here">
+
+        <!-- Header -->
+        <h1>Donate</h1>
+
+        <!-- Donation Form Container -->
+        <div class="donation-container">
+
+            <!-- Donation/Payment Information -->
+            <div class="donation-form donation-div1">
+                <h4>My Donation</h4>
+                <h3>Payment Type</h3>
+                <h3>Payment Details</h3>
+            </div>
+
+            <!-- Frequency -->
+            <div class="donation-form donation-div2">
+                <input type="radio" name="donation" id="one-time" checked="checked">
+                <label for="one-time">One Time</label>
+
+                <input type="radio" name="donation" id="monthly">
+                <label for="monthly">Monthly</label>
+            </div>
+
+            <!-- Donation Amount -->
+            <div class="donation-form donation-div3">
+                <h3>Choose a <b>one-time</b> payment</h3>
+                
+                <!-- Amount Buttons -->
+                <div class="donation-amounts">
+                    <!-- $1 -->
+                    <input type="radio" name="donate-money" id="one">
+                    <label for="one">$1</label>
+
+                    <!-- $5 -->
+                    <input type="radio" name="donate-money" id="five">
+                    <label for="five">$5</label>
+
+                    <!-- $10 -->
+                    <input type="radio" name="donate-money" id="ten">
+                    <label for="ten">$10</label>
+
+                    <!-- $20 -->
+                    <input type="radio" name="donate-money" id="twenty">
+                    <label for="twenty">$20</label>
+
+                    <!-- $50 -->
+                    <input type="radio" name="donate-money" id="fifty">
+                    <label for="fifty">$50</label>
+
+                    <!-- Custom Box -->
+                    <input type="text" id="company" name="company" placeholder="Custom Amount">
+                </div>
+            </div>
+
+            <!-- Misc Information -->
+            <div class="donation-form donation-div4">
+                <h3>$1 Minimum Donation</h3>
+                <label class="check-box-container">Please make my gift go further by adding ______________ to cover the processing fees and other expenses associated with my donation.
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="check-box-container">Dedicate this gift to a friend or loved one.
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                <div class="donation-continue">
+                    <a href="404.html">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="foot" id="footer">
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <h1>Newsletter</h1>
+            <p>Sign up for our bi-weekly newsletter which details updates and events regarding OnTop.</p>
+            <input type="text" name="newsletter" id="newsletter" placeholder="Email">
+            <input type="submit" name="submit" id="submit">
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-follow-us">
+            <h1>Follow Us</h1>
+            
+            <ul>
+                <!-- Instagram -->
+                <li>
+                    <a href="404.html" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        Instagram
+                    </a>
+                </li>
+
+                <!-- Facebook -->
+                <li>
+                    <a href="404.html" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                        Facebook
+                    </a>
+                </li>
+
+                <!-- Youtube -->
+                <li>
+                    <a href="404.html" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                        Youtube
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Other Stuff (Stacked Section) -->
+        <div class="footer-other">
+
+            <!-- Support Us -->
+            <div class="footer-support-us">
+                <h1>Support Us</h1>
+                <ul>
+                    <!-- Donate -->
+                    <li>
+                        <a href="support-us.html">Donate</a>
+                    </li>
+
+                    <!-- Support Us -->
+                    <li>
+                        <a href="support-us.html">Support Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- About Us -->
+            <div class="footer-about-us">
+                <h1>About Us</h1>
+                <ul>
+
+                    <!-- Who Are We -->
+                    <li>
+                        <a href="who-are-we.html">Who Are We</a>
+                    </li>
+
+                    <!-- What We Do -->
+                    <li>
+                        <a href="what-we-do.html">What We Do</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
